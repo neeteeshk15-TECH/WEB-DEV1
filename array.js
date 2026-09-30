@@ -21,7 +21,7 @@ console.log(myarr1);
 
 myarr1.unshift('neeteesh');
 console.log(myarr1);
-//this method is used to add an element at the start of the array this is wrost method becouse if we are addind value in array at the start then we are shifting the each element . assume if array was 10000 length then it may be time consuming
+//this method is used to add an element at the start of the array this is wrost method becouse if we are adding value in array at the start then we are shifting the each element . assume if array was 10000 length then it may be time consuming
 myarr1.shift('neeteesh');
 console.log(myarr1);
 //this method is used to remove an given element from the start of the array this is wrost method becouse if we are removing value in array at the start then we are shifting the each element . assume if array was 10000 length then it may be time consuming
@@ -47,3 +47,40 @@ const newarr2=myarr.slice(1,4);
 console.log(newarr2);
 console.log(newarr1);
 console.log(newarr2);
+//slice method is used to copy the array from given start index to end index and return a new array
+console.log('A',newarr1);
+console.log("myarr=" + myarr);
+const newarr3=myarr.splice(1,4);
+console.log(newarr3);
+console.log(myarr);
+//part2 
+const marvel=['ironman','spiderman','thor',];
+const dc=['batman','superman'];
+const hero=marvel.push(dc);
+console.log(marvel);
+//basically push method is used to add an element at the end of the array but here we are adding an array in another array so it will add the whole array as a single element at the end of the array
+const hero1=marvel.concat(dc);
+console.log(marvel);
+console.log(marvel);
+//concat method is used to add an array in another array but here it will add the elements of the array in another array not as a single element
+
+const marvel1=['ironman','spiderman','thor',];
+const dc1=['batman','superman'];
+const allhero=[...marvel1,...dc1];
+console.log(allhero);
+//this is called spread operator it is used to add an array in another array but here it will add the elements of the array in another array not as a single element
+const newarray=[1,2,3,4,[5,2,3],[6,[7,3,2,[3,8]]]];
+ const newarray1=newarray.flat(4);
+ console.log(newarray1);
+//flat method is used to flatten the array means it will remove the nested array and return a new array with all the elements in a single array
+//WE CAN SOLVE BY USING DEPTH LIKE 1, 2....INFINITY
+console.log(Array.isArray("hitesh"));
+console.log(Array.from("hitesh"));
+//Array.isArray method is used to check whether the given value is an array or not if it is an array then it will return true else false
+//Array.from method is used to convert a string into an array
+console.log(Array.from({name:"hitesh"}));  //intresting thing is it will return an empty array because
+let score1=1;
+let score2=2;
+let score3=3;   
+console.log(Array.of(score1,score2,score3));
+//Array.of method is used to create an array from the given values
