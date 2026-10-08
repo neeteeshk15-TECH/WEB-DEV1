@@ -20,6 +20,7 @@ function loginusermassage(username='sam'){
 }
 console.log(loginusermassage("neeteeesh"));
 console.log(loginusermassage());
+//by using spread operator we can pass multiple values in function and it will treat all the values as array
 function callculateprice(...num1)
 {
     return num1;

@@ -1,0 +1,18 @@
+.welcome{
+    background-color: #f4a261;
+}
+.full{
+    background-color: #264653;
+}
+.content{
+    background-color: #c5e641;
+    text-align: center;
+    text-color: #0b9ed8;
+    font: italic bold 20px/30px Georgia, serif;
+}
+.new{
+     background-color: #c5e641;
+    text-align: center;
+    text-color: #0b9ed8;
+    font: italic bold 40px/60px Georgia, serif;
+}
