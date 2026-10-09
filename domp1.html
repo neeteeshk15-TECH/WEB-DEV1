@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom intro first</title>
+</head>
+<body>
+    <h1 class="head">hello world</h1>
+    <p>lets learn about the DOM</p>
+    <ul class="lang">
+        <li class="language">python</li>
+        <li class="language">java</li>
+        <li class="language">javascript</li>
+    </ul>
+    <p class="text">this is your first paragraph</p>
+    <p class="text">2nd paragraph</p>
+    <p class="text">3rd is your first paragraph</p>
+    <p class="text">4th is your first paragraph</p>
+    <button class="divadd" type="button">cilck for add div</button>
+    <script>
+        // Your JavaScript code here
+        console.log(document)
+        console.log(window)
+        console.log(document.title)
+        const header=document.querySelector('.head');
+        header.innerHTML="hellow world from js"
+        //changing heading
+        const header1=document.querySelector('.head');
+        header1.innerHTML='hello boy this is dom cod';
+        //changing paragraph
+        const para=document.querySelectorAll('.text');
+        const arrp=Array.from(para);
+        arrp.forEach((text)=>{
+            text.innerHTML='this is first paragraph change'
+        })
+        //craeating paragraph
+        const adddiv=document.querySelector('.divadd');
+        adddiv.onclick=function(){
+            const divnew=document.createElement('div')
+            divnew.innerHTML='<p>this is javascript</p>'
+            adddiv.appendChild(divnew)
+        }
+        //changing inner html by dom
+        const varr=document.querySelector('.divadd');
+        varr.onclick= function(){
+            const changetext=document.querySelector('.text')
+            changetext.innerHTML='this is testing of first dome changing method';
+        }
+
+
+    </script>
+</body>
+</html>

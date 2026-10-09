@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edit dom elements</title>
+</head>
+<body style="background-color: blue;">
+    <ul class="language" style="color: rgb(255, 0, 0); font-size: 20px;margin: 10px; padding: 50px; margin-left: 50px; ">
+        <li>JavaScript</li>
+        
+    </ul>
+    <script>
+        function addlanguage(langname){
+          const li=document.createElement('li');
+          li.innerHTML=`${langname}`;  
+          document.querySelector('.language').appendChild(li);
+
+
+        }
+        addlanguage('Python');
+        addlanguage('Java');   
+        addlanguage('C++');
+        addlanguage('C#');
+        addlanguage('PHP');
+        function addoptilang(langname){
+            const li=document.createElement('li');
+            li.appendChild(document.createTextNode(langname));
+            document.querySelector('.language').appendChild(li);
+       }
+       addoptilang('Ruby');
+       //edit dom elements
+         const ul=document.querySelector('li:nth-child(3)');
+            const newli=document.createElement('li');
+            newli.textContent='C';
+            ul.replaceWith(newli);
+        //replace python with perl
+        const ul2=document.querySelector('li:first-child');
+        ul2.outerHTML='<li>Perl</li>'
+        //remove php
+        const ul3=document.querySelector('li:last-child');
+        ul3.remove();
+        
+
+
+    </script>     
+</body>
+</html>

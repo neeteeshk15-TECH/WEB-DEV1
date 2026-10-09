@@ -7,7 +7,23 @@
 </head>
 <body style="background-color: blue;">
 
+<script>
+    const div=document.createElement('div');
+    console.log(div);
+    div.className='day';
+    div.id=Math.random()*10;
+    div.setAttribute('title','this is a day');
+    div.style.backgroundColor='red';
+    // div.innerHTML='Friday'; 
+    // here search why we use create element over innerhtml or div.appendchild
+    div.style.color='black';
+    div.style.padding='10px';
+    div.style.margin='10px';
+    const text=document.createTextNode('Friday');
+    div.appendChild(text);
+    
 
+</script>
     
 </body>
 </html>
